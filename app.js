@@ -8,6 +8,7 @@ require('dotenv').config()
 const {
   configOIDC,
   configOIDCv2,
+  configOIDCv3,
   configMyInfo,
   configSGID,
 } = require('./lib/express')
@@ -51,6 +52,7 @@ app.use(morgan('combined'))
 
 configOIDC(app, options)
 configOIDCv2(app, options)
+configOIDCv3(app, options)
 configSGID(app, options)
 
 configMyInfo.consent(app, options)
