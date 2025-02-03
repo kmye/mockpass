@@ -15,6 +15,19 @@ A mock Singpass/Corppass/Myinfo v3/sgID v2 server for dev purposes
 
 ## Quick Start (hosted locally)
 
+### New SingPass + User Info Flow
+
+Configure your application to point to the following endpoints:
+
+- http://localhost:5156/singpass/v3/.well-known/openid-configuration
+
+- EITHER configure MockPass with your application's JWKS endpoint URL using the env
+  var `SP_RP_JWKS_ENDPOINT`.
+- OR configure your application to use the private keys from
+  `static/certs/oidc-v2-rp-secret.json`.
+
+MockPass accepts any value for `client_id` and `redirect_uri`.
+
 ### Singpass v2 (NDI OIDC)
 
 Configure your application to point to the following endpoints:
