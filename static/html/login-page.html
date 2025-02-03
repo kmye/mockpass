@@ -165,6 +165,19 @@
                                                         <div id="LoginForm">
                                                             <div class="login-label">Log in</div>
                                                             <br>
+                                                            <div style="width: 100%; ">
+                                                                <label for="nric">NRIC</label>
+                                                                <input type="text" name="nric" id="nric-input" value="S1234567A" minlength="9" maxlength="9">
+                                                                {{#redirectURI}}<input type="hidden" name="redirectURI" value="{{ redirectURI }}" />{{/redirectURI}}
+                                                                {{#state}}<input type="hidden" name="state" value="{{ state }}" />{{/state}}
+                                                                {{#nonce}}<input type="hidden" name="nonce" value="{{ nonce }}" />{{/nonce}}
+                                                                {{#scopes}}<input type="hidden" name="scopes" value="{{ scopes }}" />{{/scopes}}
+                                                            </div>
+                                                            <button autofocus="" type="submit">Login</button>
+                                                            <br>
+                                                            <br>
+                                                            <h6>or select user</h6>
+                                                            <br>
                                                             <div class="dropdown" style="width: 100%; ">
                                                                 <input id="id-input" list="id-datalist" class="btn btn-secondary dropdown-toggle" oninput="redirectID()" placeholder= "Select Username" style="width: 100%; border: 2px solid #ccc; border-radius: 5px; background: white; color: rgb(42, 45, 51); text-align: left;">
                                                                 <datalist class="dropdown-menu" id="id-datalist" aria-labelledby="id-input" >
